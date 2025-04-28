@@ -1,9 +1,85 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Title</title>
+
+    <!--Meta Data-->
+    <meta charset="utf-8" />
+    <meta name="description" content="Volume and Surface Area of a cone in JS" />
+    <meta name="keywords" content="immaculata, icd2o" />
+    <meta name="author" content="BrandonBCode" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--Favicon Essentials-->
+    <link rel="apple-touch-icon" sizes="180x180" href="./favi_assign3/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favi_assign3/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./favi_assign3/favicon-16x16.png" />
+    <link rel="manifest" href="./favi_assign3/site.webmanifest" />
+
+    <!--MDL Crucial Code-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-amber.min.css" />
+
+    <!--Referencing Style Sheet-->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!--Title for Browser-->
+    <title>Cone Calculation</title>
   </head>
   <body>
-    <p>Paragraph</p>
+
+    <!--MDL Crucial Code-->
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+    <!--Links JS To HTML-->
+    <script src="./js/script.js"></script>
+
+    <!--MDL Header-->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Volume and Surface Area of a Cone</span>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <table>
+          <tr>
+            <th>
+
+              <!--Allows you to put images HTML-->
+              <img src="./images/cone.png" alt="cone" width="75%" height="auto"/>
+            </th>
+            <th>
+              <!--Header Tags-->
+              <h2>Volume and Surface area of a Cone</h2>
+            </th>
+          </tr>
+        </table>
+        
+        <p>
+      <h3>Please enter the following:</h3>
+
+      <!--Information for Function-->
+      <form action="javascript:coneConversion()">
+        <label for="radius-input">Radius (CM)</label>
+        <input type="number" id="radius-input" min="0" step=".01" placeholder="Radius of Cone"><br><br>
+        <label for="height-input">Height (CM)</label>
+        <input type="number" id="height-input" min="0" step=".01" placeholder="Height of Cone"><br><br>
+      </form>
+    </p>
+
+        <!-- Raised button with ripple -->
+        <button
+          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+          onclick="coneConversion()"> Calculate  
+        </button>
+        <br/>
+        <p>
+
+          <!--Tells the computer where to put the message-->
+          <div id="surface-area"></div>
+          <div id="volume-cone"></div>
+        </p>
+      </main>
+    </div>
   </body>
 </html>
